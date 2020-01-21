@@ -1,0 +1,62 @@
+#include <stdio.h>
+
+int main(){
+	int pdvMonster;
+	int attaqueSympa;
+	int attaqueMonstrueuse;
+	int pdvJoueur;
+
+
+	pdvMonster=100;
+	pdvJoueur=100;
+	attaqueSympa=50;
+	attaqueMonstrueuse=25;
+
+
+	printf("Le monstre a : %d points de vie\n", pdvMonster);
+	printf ("\n");
+	printf ("Attaque sympa fait %d points de degat\n", attaqueSympa);
+
+	 pdvMonster-=attaqueSympa;
+
+	 if (pdvMonster <= 0)
+ 	{
+ 	  printf ("Le monstre est mort\n");
+ 	}
+ 	else
+ {
+	 printf("Le monstre a desormais : %d points de vie\n", pdvMonster);
+	 printf ("\n");
+	 printf("Attention le monstre vous attaque monstrueusement\n");
+
+	 pdvJoueur-=attaqueMonstrueuse;
+
+	 if (pdvJoueur <= 0)
+	 {
+	 	printf ("Game Over\n");
+	 }
+	 else
+	 {
+	 printf("Vous avez : %d points de vie\n", pdvJoueur);
+	 printf("Il vous reste : %d points de vie\n", pdvJoueur);
+	 printf ("\n");
+	 printf ("Vous attaquez de nouveau\n");
+
+	 pdvMonster-=attaqueSympa;
+
+	 if (pdvMonster <= 0)
+ 	{
+ 	  printf ("Le monstre est mort lol\n");
+ 	}
+ 	else
+ {
+	 printf("Le monstre a desormais : %d points de vie\n", pdvMonster);
+	 printf ("\n");
+	 printf("Attention le monstre vous attaque monstrueusement\n");
+
+	 pdvJoueur-=attaqueMonstrueuse;
+	 }
+ }
+}
+    return 0;
+}
